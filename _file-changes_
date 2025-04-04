@@ -1,0 +1,102 @@
+.sponsor-card {
+    background: var(--dark-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.sponsor-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sponsor-card p {
+    font-size: 1rem;
+}
+
+.sponsor-card img { 
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+<section class="sponsors-section">
+    <h2>Our Sponsors</h2>
+    <div class="sponsors-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; padding: 2rem;">
+        <a href="https://www.moneylion.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>MoneyLion</h3>
+                <p>Financial Technology Company</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $4.2 million+</span> - 2024–2025</p>
+            </div>
+        </a>
+        <a href="https://www.experian.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Experian</h3>
+                <img src="/Experian_logo.png" alt="Experian Logo">
+                <p>Consumer Credit Reporting Agency</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $12 million+</span> - 2024</p>
+            </div>
+        </a>
+        <a href="https://www.shopify.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Shopify</h3>
+                <img src="/1280px-Shopify_logo_2018.svg.png" alt="Shopify Logo">
+                <p>E-commerce Platform</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $10–15 million+</span> - Multi-year through 2024–2025</p>
+            </div>
+        </a>
+        <a href="https://www.epicgames.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Epic Games</h3>
+                <img src="/Epic_Games_logo.svg (1).png" alt="Epic Games Logo">
+                <p>Video Game and Software Developer</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $5–10 million+</span> - Multi-year through 2024–2025</p>
+            </div>
+        </a>
+        <a href="https://www.samsung.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Samsung</h3>
+                <img src="/Samsung_Logo.png" alt="Samsung Logo">
+                <p>Multinational Electronics Corporation</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $5–10 million+</span> - Multi-year through 2024–2025</p>
+            </div>
+        </a>
+        <a href="https://current.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Current</h3>
+                <img src="/6722924397466.png" alt="Current Logo">
+                <p>Mobile Banking App</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $5–7 million+</span> - 2021–2025</p>
+            </div>
+        </a>
+        <a href="https://www.myquidd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Quidd</h3>
+                <img src="/quidd.png" alt="Quidd Logo">
+                <p>Digital Collectibles Platform</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $200,000</span> - 2017–2018</p>
+            </div>
+        </a>
+        <a href="https://turbotax.intuit.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>TurboTax</h3>
+                <img src="/TurboTax-logo.png" alt="TurboTax Logo">
+                <p>Tax Preparation Software</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $3–5 million</span> - 2024</p>
+            </div>
+        </a>
+        <a href="https://www.nba.com/hornets/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+            <div class="sponsor-card" style="background: var(--dark-gray); padding: 2rem; border-radius: 10px; text-align: center;">
+                <h3>Charlotte Hornets</h3>
+                <img src="/Charlotte_Hornets.png" alt="Charlotte Hornets Logo">
+                <p>Professional Basketball Team</p>
+                <p><span style="color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);"> $3–5 million+</span> - 2023–2025</p>
+            </div>
+        </a>
+        <!-- Add more sponsor cards -->
+    </div>
+</section>

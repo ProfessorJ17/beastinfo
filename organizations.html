@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRBEAST.com</title>
+    <title>MRBEAST Organizations</title>
     <link href="https://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
     <link rel="stylesheet"
@@ -86,148 +86,151 @@
             flex-wrap: wrap; /* Allow header items to wrap */
         }
 
-        .logo-container {
-            position: relative;
-            flex-basis: 50%; /* Reduce vertical space */
-            text-align: center;
-            max-height: 3rem; /* Limit the height */
-            overflow: hidden; /* Ensure no extra spacing */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+ .logo-container {
+    position: relative;
+    flex-basis: 50%; /* Reduce vertical space */
+    text-align: center;
+    max-height: 3rem; /* Limit the height */
+    overflow: hidden; /* Ensure no extra spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .logo {
-            font-size: 2rem; /* Slightly smaller font size */
-            background: linear-gradient(90deg, var(--cyan), var(--pink));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            position: relative;
-            z-index: 1;
-            font-family: 'Komika Axis', sans-serif;
-            line-height: 1; /* Reduce vertical spacing */
-        }
+.logo {
+    font-size: 2rem; /* Slightly smaller font size */
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 1;
+    font-family: 'Komika Axis', sans-serif;
+    line-height: 1; /* Reduce vertical spacing */
+}
 
-        .logo-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 80%;
-            height: 80%; /* Reduce the height */
-            transform: translate(-50%, -50%);
-            filter: blur(7px); /* Reduce blur intensity */
-            opacity: 0.5; /* Lower opacity */
-            background: linear-gradient(90deg, var(--cyan), var(--pink));
-            z-index: 0;
-            animation: pulse 2.5s infinite alternate;
-        }
+.logo-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%; /* Reduce the height */
+    transform: translate(-50%, -50%);
+    filter: blur(7px); /* Reduce blur intensity */
+    opacity: 0.5; /* Lower opacity */
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    z-index: 0;
+    animation: pulse 2.5s infinite alternate;
+}
 
-        @keyframes pulse {
-            0% {
-                opacity: 0.3;
-            }
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+        filter: blur(5px);
+    }
 
-            100% {
-                opacity: 0.5;
-            }
-        }
+    100% {
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+}
 
-        nav {
-            flex-basis: 50%; /* Reduce the nav size by half */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 0.5rem; /* Reduce padding above nav */
-            height: 2rem; /* Reduce height */
-        }
+nav {
+    flex-basis: 50%; /* Reduce the nav size by half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem; /* Reduce padding above nav */
+    height: 2rem; /* Reduce height */
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 0.5rem; /* Reduce spacing between items */
-            font-family: 'Komika Axis', sans-serif;
-            flex-wrap: wrap; /* Allow nav items to wrap */
-            justify-content: center;
-            font-size: 0.9rem; /* Reduce font size */
-        }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem; /* Reduce spacing between items */
+    font-family: 'Komika Axis', sans-serif;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    justify-content: center;
+    font-size: 0.9rem; /* Reduce font size */
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem; /* Slightly smaller font */
-            position: relative;
-            padding: 0.2rem 0; /* Reduce padding */
-            transition: all 0.3s;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* Slightly smaller font */
+    position: relative;
+    padding: 0.2rem 0; /* Reduce padding */
+    transition: all 0.3s;
+}
 
-        nav a:hover {
-            color: var(--cyan);
-            text-shadow: 0 0 5px var(--pink);
-        }
+nav a:hover {
+    color: var(--cyan);
+    text-shadow: 0 0 5px var(--pink);
+}
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px; /* Reduce underline thickness */
-            background: linear-gradient(90deg, var(--cyan), var(--pink));
-            transition: width 0.3s;
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Reduce underline thickness */
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    transition: width 0.3s;
+}
 
-        nav a:hover::after {
-            width: 100%;
-        }
+nav a:hover::after {
+    width: 100%;
+}
 
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--dark-gray);
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            border-radius: 5px;
-            overflow: hidden;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 0.5rem;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-gray);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+}
 
-        .dropdown-content a {
-            color: white;
-            padding: 8px 12px; /* Adjusted for smaller nav */
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            font-size: 0.9rem;
-            font-family: 'Komika Axis', sans-serif;
-        }
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px; /* Adjusted for smaller nav */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Komika Axis', sans-serif;
+}
 
-        .dropdown-content a:hover {
-            background-color: var(--light-gray);
-            box-shadow: 0 0 5px var(--cyan);
-        }
+.dropdown-content a:hover {
+    background-color: var(--light-gray);
+    box-shadow: 0 0 5px var(--cyan);
+}
 
-        .dropdown-content a::after {
-            display: none;
-        }
+.dropdown-content a::after {
+    display: none;
+}
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        .dropdown:hover .dropbtn::after {
-            width: 100%;
-        }
+.dropdown:hover .dropbtn::after {
+    width: 100%;
+}
+
 
         /* Hero Section */
         .hero-background {
@@ -548,8 +551,6 @@
             background-clip: text;
             color: transparent;
             text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            font-weight: bold;
-            font-size: 1.1rem;
             font-weight: bold;
         }
 
@@ -999,7 +1000,7 @@
 
             .about-content {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1rem;
             }
         }
 
@@ -1007,6 +1008,39 @@
             nav ul {
                 flex-wrap: wrap;
             }
+        }
+        
+        .org-card {
+            background: var(--dark-gray);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .org-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .money {
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+        }
+        
+        .highlight.money {
+            background: linear-gradient(90deg, #00ff00, #00cc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -1028,18 +1062,17 @@
                         <a href="products.html#Feastables">Feastables</a>
                         <a href="products.html#MRBEAST Lab">MRBEAST Lab</a>
                         <a href="products.html#Lunchly">Lunchly</a>
-                        <a href="products.html#MRBEAST Burger">MRBEAST Burger</a>
                     </div>
                 </li>
                 <li><a href="sponsors.html">Sponsors</a></li>
                 <li class="dropdown">
                     <a href="organizations.html" class="dropbtn">Organizations</a>
                     <div class="dropdown-content">
-                        <a href="organizations.html#Team Trees">Team Trees</a>
-                        <a href="organizations.html#Team Seas">Team Seas</a>
-                        <a href="organizations.html#Beast Philanthropy">Beast Philanthropy</a>
-                        <a href="organizations.html#MRBEAST Scholarship Fund">MRBEAST Scholarship Fund</a>
-                        <a href="organizations.html#The Beast Foundation">The Beast Foundation</a>
+                        <a href="#Team Trees">Team Trees</a>
+                        <a href="#Team Seas">Team Seas</a>
+                        <a href="#Beast Philanthropy">Beast Philanthropy</a>
+                        <a href="#MRBEAST Scholarship Fund">MRBEAST Scholarship Fund</a>
+                        <a href="#The Beast Foundation">The Beast Foundation</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -1058,513 +1091,117 @@
     </header>
 
     <main>
-        <div class="hero-background" style="background: rgba(0, 230, 230, 0.1);">
-            <img src="/aqad7u6xh8fd1.jpg" style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;">
-            <section class="hero">
-                <div class="hero-content">
-                    <h2> EPIC CHALLENGES • MASSIVE PRIZES</h2>
-                    <h2> INSANE GIVEAWAYS • LIFE-CHANGING WINS</h2>
-                    <h2> DON'T MISS OUT – JOIN NOW! </h2>
-                    <a href="https://www.youtube.com/@MRBEAST?sub_confirmation=1" target="_blank">
-                        <button class="glow-button"><span>Subscribe to MrBeast!</span></button>
+        <section class="organizations-section">
+            <h2 style="text-align: center; margin: 0 auto; display: block; transform: none; left: auto;">Our Organizations</h2>
+            <div class="org-grid">
+                <div class="org-card" id="Team Trees">
+                    <h3>Team Trees</h3>
+                    <img src="/Team_Trees_circle_logo.png" alt="Team Trees Logo" style="max-width: 200px; margin: 0 auto; display: block;">
+                    <p>20+ Million Trees Planted Worldwide</p>
+                    <p>Total Raised: <span class="highlight money">$24.8 Million</span></p>
+                    <a href="https://teamtrees.org" target="_blank" rel="noopener noreferrer" class="glow-button">
+                        <span>Learn More</span>
                     </a>
+                    <div class="org-details">
+                        <h4>Key Accomplishments:</h4>
+                        <ul>
+                            <li>Launched October 25, 2019</li>
+                            <li>Over 25 million trees planted by 2025</li>
+                            <li>30 countries and 11 U.S. states covered</li>
+                            <li>Estimated 1.6 million tons of carbon absorbed</li>
+                            <li>Continued daily tree planting efforts</li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-        </div>
 
-        <section id="about" class="about" style="background: radial-gradient(circle, rgba(255, 0, 255, 0.1) 0%, rgba(0, 230, 230, 0.1) 100%);">
-            <h2>About MRBEAST</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Jimmy Donaldson, known as MRBEAST, grew up in Greenville, North Carolina, where he started making YouTube videos as a teenager. His big break came in 2017 when his viral "counting to 100,000" video skyrocketed his channel. Since then, he has become the biggest YouTuber in the world, known for his massive giveaways, crazy challenges, and philanthropic efforts that have changed millions of lives.</p>
+                <div class="org-card" id="Team Seas">
+                    <h3>Team Seas</h3>
+                    <img src="/TeamSeasLogo.png" alt="Team Seas Logo" style="max-width: 200px; margin: 0 auto; display: block;">
+                    <p>33+ Million Pounds of Trash Removed from Oceans</p>
+                    <p>Total Raised: <span class="highlight money">$34 Million</span></p>
+                    <a href="https://teamseas.org" target="_blank" rel="noopener noreferrer" class="glow-button">
+                        <span>Learn More</span>
+                    </a>
+                    <div class="org-details">
+                        <h4>Key Accomplishments:</h4>
+                        <ul>
+                            <li>Initiated October 29, 2021</li>
+                            <li>Over 33 million pounds of trash removed</li>
+                            <li>Partnership with Ocean Conservancy</li>
+                            <li>Supported by The Ocean Cleanup's Interceptors</li>
+                            <li>Ongoing marine ecosystem restoration</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="subscriber-count">500M+</span>
-                        <span class="stat-label">Subscribers</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">$100M+</span>
-                        <span class="stat-label">Given Away</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100B+</span>
-                        <span class="stat-label">Video Views</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="channels" class="channels">
-            <h2>MRBEAST Channels</h2>
-            <div class="channel-grid">
-                <div class="row">
-                    <div data-aos="fade-down">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/@MRBEAST?sub_confirmation=1" target="blank"
-                                class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>365 million subscribers</h5>
-                                <p>MRBEAST</p>
-                            </div>
-                        </div>
+                <div class="org-card" id="Beast Philanthropy">
+                    <h3>Beast Philanthropy</h3>
+                    <img src="/BP-tier-coins_V3_beast.png" alt="Beast Philanthropy Logo" style="max-width: 200px; margin: 0 auto; display: block;">
+                    <p>100% of Revenue Donated to Charitable Causes</p>
+                    <p>Over 25 Million Subscribers</p>
+                    <p>Donation Impact: <span class="highlight money">$2.7 Million</span> in clothing donations</p>
+                    <a href="https://www.beastphilanthropy.org" target="_blank" rel="noopener noreferrer" class="glow-button">
+                        <span>Learn More</span>
+                    </a>
+                    <div class="org-details">
+                        <h4>Key Accomplishments:</h4>
+                        <ul>
+                            <li>Founded in 2020</li>
+                            <li>100 wells built in Africa</li>
+                           
+                            <li>14 homes built for tornado survivors</li>
+                            <li>Over 1 Million meals distributed</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div data-aos="fade-left">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UCIPPMRA040LQr5QPyJEbmXA?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>46.7 million subscribers</h5>
-                                <p>MRBEAST Gaming</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="fade-right">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UCUaT_39o1x6qWjz7K2pWcgw?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>36 million subscribers</h5>
-                                <p>Beast Reacts</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-down">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UC4-79UOlP48-QNGgCko5p2g?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>49.5 million subscribers</h5>
-                                <p>MRBEAST Shorts</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-up">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UCAiLfjNXkNv24uhpzUgPa6A/featured?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>27.5 million subscribers</h5>
-                                <p>MRBEAST Philanthropy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="fade-right">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UCZzvDDvaYti8Dd8bLEiSoyQ/videos?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>7.33 million subscribers</h5>
-                                <p>MRBEAST 3</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-down">
-                        <div class="channel-item">
-                            <a href="https://www.youtube.com/channel/UC68DIXWCmetC8N5J_Kc5gjQ?sub_confirmation=1"
-                                target="blank" class="channel-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>1.28 million subscribers</h5>
-                                <p>Don't Subscribe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-left">
-                        <div class="channel-item">
-                            <a href="https://www.instagram.com/MRBEAST/?hl=en" target="blank"
-                                class="channel-icon instagram" aria-label="Instagram Subscribe">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>107.7 million followers</h5>
-                                <p>MRBEAST</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="zoom-in-left">
-                        <div class="channel-item">
-                            <a href="https://www.tiktok.com/@MRBEAST?lang=en" target="blank" class="channel-icon tiktok"
-                                aria-label="TikTok Subscribe">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>108 million followers</h5>
-                                <p>MRBEAST</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="zoom-in-right">
-                        <div class="channel-item">
-                            <a href="https://www.snapchat.com/add/MRBEAST" target="blank" class="channel-icon snapchat"
-                                aria-label="Snapchat Subscribe">
-                                <i class="fab fa-snapchat"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>1 million followers</h5>
-                                <p>MRBEAST Snap</p>
-                                <p>Snap Star</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-up">
-                        <div class="channel-item">
-                            <a href="https://www.snapchat.com/discover/MRBEAST/9065163373" target="blank"
-                                class="channel-icon snapchat" aria-label="Snapchat Show Subscribe">
-                                <i class="fab fa-snapchat"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>7 million followers</h5>
-                                <p>MRBEAST Show</p>
-                                <p>Snapchat Show</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-right">
-                        <div class="channel-item">
-                            <a href="https://twitter.com/MRBEAST?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                                target="blank" class="channel-icon twitter" aria-label="Twitter Subscribe">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>35 million followers</h5>
-                                <p>MRBEAST Twitter</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-left">
-                        <div class="channel-item">
-                            <a href="https://www.facebook.com/MRBEAST6000/" target="blank"
-                                class="channel-icon facebook" aria-label="Facebook Subscribe">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>27 million followers</h5>
-                                <p>MRBEAST Facebook</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div data-aos="flip-right">
-                        <div class="channel-item">
-                            <a href="https://www.twitch.tv/MRBEAST6000" target="blank" class="channel-icon twitch"
-                                aria-label="Twitch Subscribe">
-                                <i class="fab fa-twitch"></i>
-                            </a>
-                            <div class="channel-content">
-                                <h5>600k followers</h5>
-                                <p>MRBEAST Twitch</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="challenges" class="challenges">
-            <h2>All Challenges</h2>
-            <p style="text-align: center; font-family: 'Komika Axis', sans-serif;">More than $24M+ in these contests alone.</p>
-            <h3 style="text-align: center; font-family: 'Komika Axis', sans-serif;">Top Prizes Won Legitimately:</h3>
-            <div class="challenge-grid">
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Grand Prize) - <span class="prize-money">$10,004,242</span> - 2025</h3>
-                        <p>Winner: Jeffrey Randall Allen</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (MoneyLion Giveaway) - <span class="prize-money">$4,200,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Private Island) - <span class="prize-money">$1,800,000</span> - 2025</h3>
-                        <p>Winner: Mia Speight</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Bribe) - <span class="prize-money">$1,000,000</span> - 2025</h3>
-                        <p>Winner: Gage Gallagher</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave $800,000 Island Keeps It - <span class="prize-money">$800,000</span> (Island) - 2022</h3>
-                        <p>Winner: Chandler Hallow</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$650,000</span> - 2025</h3>
-                        <p>Winner: JC Gallego Iori</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave Circle Wins $500,000 - <span class="prize-money">$500,000</span> - 2021</h3>
-                        <p>Winner: Shawn Hendrix</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Survive 100 Days In Circle, Win $500,000 - <span class="prize-money">$500,000</span> - 2022</h3>
-                        <p>Winner: Shawn Hendrix</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Squid Game in Real Life - <span class="prize-money">$456,000</span> - 2021</h3>
-                        <p>Winner: Cam</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Self-Elimination) - <span class="prize-money">$450,000</span> - 2025</h3>
-                        <p>Winner: Esteban Zepeda</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave Yacht Wins It - <span class="prize-money">$431,000</span> (Yacht value adjusted) - 2024</h3>
-                        <p>Winner: Unspecified individual (from "Protect The Yacht, Keep It!")</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Take Hand Off $1,000,000 Keeps It - <span class="prize-money">$400,000</span> - 2019</h3>
-                        <p>Winner: Mark (reduced from $1M due to negotiation)</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>100 Boys vs 100 Girls For $500,000 - <span class="prize-money">$250,000</span> - 2022</h3>
-                        <p>Winner: Girls Team (split among 50 winners, $5,000 each)</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave Roller Coaster Wins $250,000 - <span class="prize-money">$250,000</span> - 2020</h3>
-                        <p>Winner: Chandler Hallow</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Elimination Bribe) - <span class="prize-money">$236,878</span> - 2025</h3>
-                        <p>Winner: Unspecified individual</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave Revolving Door Wins $200,000 - <span class="prize-money">$200,000</span> - 2020</h3>
-                        <p>Winner: Chandler Hallow</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$200,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$190,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave Tesla Wins It - <span class="prize-money">$150,000</span> (Tesla value) - 2020</h3>
-                        <p>Winner: Chris Tyson</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$100,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual (one of multiple $100k wins)</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$100,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual (one of multiple $100k wins)</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Beast Games (Challenge Prize) - <span class="prize-money">$100,000</span> - 2025</h3>
-                        <p>Winner: Unspecified individual (one of multiple $100k wins)</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>World’s Most Dangerous Escape Room - <span class="prize-money">$100,000</span> - 2022</h3>
-                        <p>Winner: Unspecified individual</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Last To Leave VR Wins $100,000 - <span class="prize-money">$100,000</span> - 2020</h3>
-                        <p>Winner: Chris Tyson</p>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-content">
-                        <h3>Extreme Survival Challenge (Fortnite) - <span class="prize-money">$100,000</span> - 2022</h3>
-                        <p>Winner: Anas (Guild esports player)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="org-card" id="MRBEAST Scholarship Fund">
+                    <h3>MRBEAST Scholarship Fund</h3>
+                    <img src="/BP-tier-coins_V3_beast.png" alt="MRBEAST Scholarship Fund Logo" style="max-width: 200px; margin: 0 auto; display: block;">
+                    <p>Supporting Educational Opportunities</p>
+                    <p>Contributions: <span class="highlight money">$100,000</span> for sign language studies</p>
+                    <a href="https://www.youtube.com/@MrBeast" target="_blank" rel="noopener noreferrer" class="glow-button">
+                        <span>Learn More</span>
+                    </a>
+                    <div class="org-details">
+                        <h4>Key Accomplishments:</h4>
+                        <ul>
+                            <li>Integrated with Beast Philanthropy</li>
+                            <li>Scholarships featured in viral videos</li>
+                            <li>Support for diverse educational needs</li>
 
-        <section id="videos" class="videos">
-            <h2>Latest Videos</h2>
-            <div class="video-container" id="videoFeed"></div>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/rss2json/1.1.0/rss2json.min.js"></script>
-            <script>
-                const channels = [
-                    "UCX6OQ3DkcsbYNE6H8uQQuVA", // MRBEAST
-                    "UCIPPMRA040LQr5QPyJEbmXA", // MRBEAST Gaming
-                    "UCUaT_39o1x6qWjz7K2pWcgw", // Beast Reacts
-                    "UC4-79UOlP48-QNGgCko5p2g", // MRBEAST Shorts
-                    "UCAiLfjNXkNv24uhpzUgPa6A", // MRBEAST Philanthropy
-   
-                ];
-
-                async function fetchRSS(channelId) {
-                    const url = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-                    try {
-                        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        const data = await response.json();
-
-                        if (data.status !== 'ok') {
-                            console.error("rss2json error:", data.message);
-                            return [];
-                        }
-
-                        return data.items.map(video => ({
-                            title: video.title,
-                            link: video.link,
-                            pubDate: new Date(video.pubDate),
-                            videoId: video.link.split("v=")[1].split("&")[0]
-                        }));
-                    } catch (error) {
-                        console.error("Fetching RSS feed failed:", error);
-                        return [];
-                    }
-                }
-
-                async function getLatestVideos() {
-                    let videos = [];
-                    for (let channel of channels) {
-                        const channelVideos = await fetchRSS(channel);
-                        videos = videos.concat(channelVideos.slice(0, 3));
-                    }
-
-                    // Sort videos by upload date (newest first)
-                    videos.sort((a, b) => b.pubDate - a.pubDate);
-
-                    // Take the latest 5 videos
-                    return videos.slice(0, 5);
-                }
-
-                async function displayVideos() {
-                    const videos = await getLatestVideos();
-                    let output = "";
-
-                    videos.forEach(video => {
-                        output += `
-                    <div class="video">
-                        <h3>${video.title}</h3>
-                        <iframe width="350" height="200" src="https://www.youtube.com/embed/${video.videoId}" frameborder="0" allowfullscreen></iframe>
+                            <li>Ongoing educational support</li>
+                        </ul>
                     </div>
-                `;
-                    });
-
-                    document.getElementById("videoFeed").innerHTML = output;
-                }
-
-                displayVideos();
-            </script>
-        </section>
-
-        <section id="merch" class="merch">
-            <h2>Merch</h2>
-            <div class="merch-grid">
-                <div class="merch-item">
-                    <div class="merch-image" style="background-image: url('/beast3.png'); background-size: cover; background-position: center;"></div>
-                    <h3>BEAST GAMES BRUTAL TEE - BLACK</h3>
-                    <p>$25.00</p>
-                    <a href="https://mrbeast.store/products/beast-games-brutal-ss-tee-black" target="_blank" class="shop-button">Shop Now</a>
                 </div>
-                <div class="merch-item">
-                    <div class="merch-image" style="background-image: url('/beast2.png'); background-size: cover; background-position: center;"></div>
-                    <h3>BEAST GAMES COLOR BLOCK HOODIE</h3>
-                    <p>$50.00</p>
-                    <a href="https://mrbeast.store/products/beast-games-color-block-hoodie-blue-black-white" target="_blank" class="shop-button">Shop Now</a>
-                </div>
-                <div class="merch-item">
-                    <div class="merch-image" style="background-image: url('/beast1.png'); background-size: cover; background-position: center;"></div>
-                    <h3>BEAST GAMES BASIC TEE - BLACK</h3>
-                    <p>$20.00</p>
-                    <a href="https://mrbeast.store/products/beast-games-basic-tee-black" target="_blank" class="shop-button">Shop Now</a>
+
+                <div class="org-card" id="The Beast Foundation">
+                    <h3>The Beast Foundation</h3>
+                    <img src="/BP-tier-coins_V3_beast.png" alt="The Beast Foundation Logo" style="max-width: 200px; margin: 0 auto; display: block;">
+                    <p>Emerging Philanthropic Initiative</p>
+                    <p>Potential Clean Water Focus</p>
+                    <a href="https://www.beastphilanthropy.org" target="_blank" rel="noopener noreferrer" class="glow-button">
+                        <span>Learn More</span>
+                    </a>
+                    <div class="org-details">
+                        <h4>Current Status:</h4>
+                        <ul>
+                            <li>No dedicated website as of 2025</li>
+                            <li>Possible connection to Beast Philanthropy</li>
+                            <li>Trademark filing for TeamWater in 2024</li>
+                            <li>Potential clean water access mission</li>
+                            <li>Details still emerging</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="page-content">
-        <!-- This will be dynamically replaced by menu page content -->
-    </div>
-
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <h2>MRBEAST<br><span style="font-size: 0.8rem;">INFO</span></h2>
+                <h2>MRBEAST</h2>
             </div>
             <div class="social-links">
                 <a href="https://www.youtube.com/@MRBEAST" target="_blank" class="social-icon">
@@ -1574,7 +1211,7 @@
                 </a>
                 <a href="https://www.instagram.com/MRBEAST" target="_blank" class="social-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.059-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm-3.582-6.657h-2.149v6.041h2.149v-6.041zm-5.731 0h-2.149v6.041h2.149v-6.041z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm-3.582-6.657h-2.149v6.041h2.149v-6.041zm-5.731 0h-2.149v6.041h2.149v-6.041z"/>
                     </svg>
                 </a>
                 
@@ -1583,7 +1220,7 @@
                         <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                     </svg>
                 </a>
-                <a href="https://www.facebook.com/MRBEAST6000/" target="_blank" class="social-icon">
+                <a href="https://www.twitter.com/MRBEAST" target="_blank" class="social-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                     </svg>
@@ -1606,9 +1243,6 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
 
 <html>
 

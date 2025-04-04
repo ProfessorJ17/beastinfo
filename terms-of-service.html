@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - MRBEAST</title>
+    <link href="https://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --cyan: #00e6e6;
+            --pink: #ff00ff;
+            --black: #121212;
+            --dark-gray: #1e1e1e;
+            --light-gray: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Komika Axis', sans-serif;
+            background-color: var(--black);
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            font-family: 'Komika Axis', sans-serif;
+            background-color: rgba(18, 18, 18, 0.8);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid rgba(0, 230, 230, 0.3);
+            flex-wrap: wrap; /* Allow header items to wrap */
+        }
+
+        .logo-container {
+            position: relative;
+            flex-basis: 50%; /* Reduce vertical space */
+            text-align: center;
+            max-height: 3rem; /* Limit the height */
+            overflow: hidden; /* Ensure no extra spacing */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 2rem; /* Slightly smaller font size */
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 1;
+            font-family: 'Komika Axis', sans-serif;
+            line-height: 1; /* Reduce vertical spacing */
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 80%; /* Reduce the height */
+            transform: translate(-50%, -50%);
+            filter: blur(7px); /* Reduce blur intensity */
+            opacity: 0.5; /* Lower opacity */
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            z-index: 0;
+            animation: pulse 2.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+                filter: blur(5px);
+            }
+
+            100% {
+                opacity: 0.5;
+                filter: blur(10px);
+            }
+        }
+
+        nav {
+            flex-basis: 50%; /* Reduce the nav size by half */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0.5rem; /* Reduce padding above nav */
+            height: 2rem; /* Reduce height */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem; /* Reduce spacing between items */
+            font-family: 'Komika Axis', sans-serif;
+            flex-wrap: wrap; /* Allow nav items to wrap */
+            justify-content: center;
+            font-size: 0.9rem; /* Reduce font size */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem; /* Slightly smaller font */
+            position: relative;
+            padding: 0.2rem 0; /* Reduce padding */
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 5px var(--pink);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; /* Reduce underline thickness */
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dark-gray);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px; /* Adjusted for smaller nav */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: 'Komika Axis', sans-serif;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-gray);
+            box-shadow: 0 0 5px var(--cyan);
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn::after {
+            width: 100%;
+        }
+
+
+        /* Content Styles */
+        .terms-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .terms-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            border-radius: 50px;
+        }
+
+        .terms-content {
+            background-color: var(--dark-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .terms-content h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--cyan);
+        }
+
+        .terms-content p {
+            margin-bottom: 1rem;
+        }
+
+        .terms-content ul, .terms-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .update-date {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            font-family: 'Komika Axis', sans-serif;
+            background-color: var(--dark-gray);
+            padding: 3rem 5%;
+            margin-top: 4rem;
+            border-top: 2px solid rgba(0, 230, 230, 0.3);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo h2 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: linear-gradient(45deg, var(--cyan), var(--pink));
+            transform: translateY(-5px);
+            box-shadow: 0 0 5px var(--cyan);
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-family: 'Komika Axis', sans-serif;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 5px var(--cyan);
+        }
+
+        footer p {
+            color: #777;
+            font-family: 'Komika Axis', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="background1.html" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; pointer-events: none; z-index: -1;"></iframe>
+    <header>
+        <div class="logo-container">
+            <h1 class="logo">MRBEAST<br><span style="font-size: 1rem; display: block; text-align: center;">INFO</span></h1>
+            <div class="logo-glow"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="products.html#MRBEAST Shop">MRBEAST Shop</a>
+                        <a href="products.html#Feastables">Feastables</a>
+                        <a href="products.html#MRBEAST Lab">MRBEAST Lab</a>
+                        <a href="products.html#Lunchly">Lunchly</a>
+                    </div>
+                </li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li class="dropdown">
+                    <a href="organizations.html" class="dropbtn">Organizations</a>
+                    <div class="dropdown-content">
+                        <a href="organizations.html#Team Trees">Team Trees</a>
+                        <a href="organizations.html#Team Seas">Team Seas</a>
+                        <a href="organizations.html#Beast Philanthropy">Beast Philanthropy</a>
+                        <a href="organizations.html#MRBEAST Scholarship Fund">MRBEAST Scholarship Fund</a>
+                        <a href="organizations.html#The Beast Foundation">The Beast Foundation</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="awards.html" class="dropbtn">Awards</a>
+                    <div class="dropdown-content">
+                        <a href="awards.html#Guinness Records">Guinness Records</a>
+                        <a href="awards.html#Streamy Awards">Streamy Awards</a>
+                        <a href="awards.html#Shorty Awards">Shorty Awards</a>
+                        <a href="awards.html#Kids' Choice Awards">Kids' Choice Awards</a>
+                        <a href="awards.html#Other Awards">Other Awards</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="terms-section">
+            <h2 style="text-align: center; margin: 0 auto; display: block; transform: none; left: auto;">Terms of Service</h2>
+            <div class="terms-content">
+                <p>These Terms of Service ("Terms") govern your access to and use of the websites, mobile applications, and other online products and services (collectively, the "Services") provided by MrBeast Enterprises LLC ("MrBeast," "we," "us," or "our").</p>
+                
+                <p>By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Services.</p>
+                
+                <h3>1. Eligibility</h3>
+                <p>You must be at least 13 years of age to access or use our Services. If you are under 18, you must have the consent of a parent or legal guardian. By using the Services, you represent that you meet these requirements and that you agree to these Terms on behalf of yourself or, if applicable, your parent or legal guardian.</p>
+                
+                <h3>2. Account Registration</h3>
+                <p>To access certain features of our Services, you may need to register for an account. When you register, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and update your information as needed</li>
+                    <li>Keep your password secure and confidential</li>
+                    <li>Not share your account with anyone else</li>
+                    <li>Notify us immediately of any unauthorized use of your account</li>
+                </ul>
+                <p>We reserve the right to suspend or terminate your account if any information you provide is inaccurate, outdated, or incomplete, or if you have created more than one account.</p>
+                
+                <h3>3. User Content</h3>
+                <p>Our Services may allow you to post, submit, or transmit text, images, videos, or other materials ("User Content"). You retain ownership of your User Content, but you grant us a worldwide, royalty-free, non-exclusive, transferable, sublicensable license to use, reproduce, modify, adapt, publish, translate, distribute, and display such User Content in connection with operating and providing the Services.</p>
+                
+                <p>You represent and warrant that:</p>
+                <ul>
+                    <li>You own or have the necessary rights to use and authorize us to use your User Content</li>
+                    <li>Your User Content does not violate the privacy, publicity, intellectual property, or other rights of any person</li>
+                    <li>Your User Content does not contain any material that is defamatory, obscene, offensive, hateful, or otherwise objectionable</li>
+                </ul>
+                
+                <h3>4. Prohibited Conduct</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the Services in any manner that could interfere with, disrupt, or negatively affect the Services or servers</li>
+                    <li>Use the Services to violate applicable law or intellectual property rights</li>
+                    <li>Attempt to access areas or features of the Services that you are not authorized to access</li>
+                    <li>Post misleading or fraudulent content</li>
+                    <li>Harass, threaten, or intimidate any user of our Services</li>
+                    <li>Scrape or attempt to scrape information from our Services</li>
+                    <li>Attempt to circumvent any content filtering techniques we employ</li>
+                    <li>Attempt to introduce viruses, worms, or other harmful material to the Services</li>
+                </ul>
+                
+                <h3>5. Intellectual Property</h3>
+                <p>All content, including text, graphics, logos, and images, as well as the compilation thereof, and any software used on the Services, is the property of MrBeast or its licensors and is protected by copyright, trademark, and other laws. You agree not to modify, reproduce, distribute, or create derivative works based on our Services or the content therein, except as expressly authorized by us.</p>
+                
+                <h3>6. Promotions, Contests, and Sweepstakes</h3>
+                <p>Any contests, sweepstakes, or other promotions (collectively, "Promotions") made available through the Services may be governed by rules that are separate from these Terms. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply.</p>
+                
+                <h3>7. E-Commerce</h3>
+                <p>We may make available certain merchandise for purchase through the Services. If you choose to purchase any merchandise:</p>
+                <ul>
+                    <li>You represent that you are at least 18 years old or have obtained parental consent</li>
+                    <li>You agree to provide accurate and complete payment information</li>
+                    <li>You acknowledge that all product descriptions, images, and prices are subject to change</li>
+                    <li>All sales are subject to our return and refund policies, which may vary by product</li>
+                </ul>
+                
+                <h3>8. Disclaimer of Warranties</h3>
+                <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+                
+                <p>WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SERVICES OR THE SERVERS THAT MAKE THEM AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+                
+                <h3>9. Limitation of Liability</h3>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, MRBEAST SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES.</p>
+                
+                <p>IN NO EVENT SHALL OUR AGGREGATE LIABILITY EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100) OR THE AMOUNT YOU PAID US, IF ANY, IN THE PAST SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.</p>
+                
+                <h3>10. Indemnification</h3>
+                <p>You agree to indemnify, defend, and hold harmless MrBeast, its affiliates, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Services.</p>
+                
+                <h3>11. Governing Law and Jurisdiction</h3>
+                <p>These Terms and your access to and use of the Services shall be governed by and construed in accordance with the laws of the State of North Carolina, without giving effect to any choice or conflict of law provision or rule.</p>
+                
+                <p>Any legal suit, action, or proceeding arising out of or related to these Terms or the Services shall be instituted exclusively in the federal or state courts located in North Carolina.</p>
+                
+                <h3>12. Changes to These Terms</h3>
+                <p>We may revise these Terms from time to time. If we make material changes, we will provide notice as appropriate under the circumstances, such as by displaying a prominent notice on the Services or by sending you an email. Your continued use of the Services after the changes become effective constitutes your acceptance of the changes.</p>
+                
+                <h3>13. Termination</h3>
+                <p>We may terminate or suspend your account or access to all or part of the Services, without notice, for conduct that we determine violates these Terms, infringes on intellectual property rights, is fraudulent, or is harmful to other users, us, or third parties, or for any other reason in our sole discretion.</p>
+                
+                <h3>14. Miscellaneous</h3>
+                <p>These Terms constitute the entire agreement between you and MrBeast regarding your use of the Services. If any provision of these Terms is held to be invalid or unenforceable, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+                
+                <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of such right or provision. The waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of MrBeast.</p>
+                
+                <h3>15. Contact Information</h3>
+                <p>For questions about these Terms, please contact us at:</p>
+                <p>
+                    MrBeast<br>
+                    
+                    Email: mrbeast@nightmedia.co
+                </p>
+                
+              
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MRBEAST</h2>
+            </div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@MRBEAST" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.246 11.626.245 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/MRBEAST" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://twitter.com/MRBEAST" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/MRBEAST6000/" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </a>
+                <a href="https://www.twitch.tv/MRBEAST6000" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-20.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-14.209h17.194v10.627zm-3.582-6.657h-2.149v6.041h2.149v-6.041zm-5.731 0h-2.149v6.041h2.149v-6.041z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; 2025 MRBEASTINFO ONLINE All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<html>
+
+<head>
+    <title>MrBeast ChatBot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-family: 'Montserrat', sans-serif;
+            height: auto;
+            overflow: visible;
+        }
+
+        #chatWrapper {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            z-index: 2000; 
+        }
+
+        .chat-bubble {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 50%;
+            background-color: cyan;
+            overflow: hidden;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            background-image: url('aqad7u6xh8fd1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-container {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 350px;
+            height: 520px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 163, 255, 0.3);
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .chat-header {
+            background: linear-gradient(to right, #00A3FF, #FF00FF);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+
+        .chat-messages {
+            height: calc(100% - 150px);
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background: #00A3FF;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .message.bot {
+            background: #2D2D2D;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: #2D2D2D;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: #1a1a1a;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #userInput:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00A3FF;
+        }
+
+        #sendMessage {
+            background: linear-gradient(to right, #00A3FF, #FF00FF);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        #sendMessage:hover {
+            background: linear-gradient(to right, #0086d1, #e600e6);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, #00A3FF, #FF00FF);
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        let conversationHistory = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatBubble = document.getElementById('chatBubble');
+            const chatContainer = document.getElementById('chatContainer');
+            const closeChat = document.getElementById('closeChat');
+            const sendMessage = document.getElementById('sendMessage');
+            const userInput = document.getElementById('userInput');
+            const chatMessages = document.getElementById('chatMessages');
+
+            chatBubble.addEventListener('click', () => {
+                chatContainer.style.display = 'block';
+                document.getElementById('chatWrapper').style.width = '350px';
+                document.getElementById('chatWrapper').style.height = '520px';
+                chatBubble.style.display = 'none';
+            });
+
+            closeChat.addEventListener('click', () => {
+                chatContainer.style.display = 'none';
+                document.getElementById('chatWrapper').style.width = '60px';
+                document.getElementById('chatWrapper').style.height = '60px';
+                chatBubble.style.display = 'block';
+            });
+
+            const addMessage = (message, isUser) => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+                messageDiv.textContent = message;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            };
+
+            const handleMessage = async () => {
+                const message = userInput.value.trim();
+                if (!message) return;
+
+                addMessage(message, true);
+                userInput.value = '';
+
+                ! function () {
+                    const newMessage = {
+                        role: "user",
+                        content: message
+                    };
+                    conversationHistory.push(newMessage);
+                    conversationHistory = conversationHistory.slice(-10)
+                }();
+
+                try {
+                    const completion = await websim.chat.completions.create({
+                        messages: [{
+                                role: "system",
+                                content: `You are MrBeast (Jimmy Donaldson), the famous YouTuber known for expensive challenges, philanthropy, and over-the-top personality. Respond in his enthusiastic, energetic style using his signature phrases and mannerisms. Be passionate about giving away money, helping others, and creating engaging content. Reference your popular videos, Team Beast members, and charitable work. Keep responses concise and exciting, just like MrBeast's high-energy content style. Use emojis occasionally. Always stay in character as Jimmy/MrBeast.
+                                Today is February 2025. You should only use information that is verifiably accurate and supported by reliable sources (like official statements, reputable news outlets, or MrBeast's own channels). When providing information, briefly mention the source if possible (e.g., "According to MrBeast's interview with Forbes..."). Avoid making assumptions, stating opinions as facts, or presenting potentially outdated information without confirming its current validity. If you are unsure about something, say something like "I can't confirm that with certainty, but based on what I know..." or "My information on that might be outdated, so I'd recommend checking more recent sources." Only give definitive answers when you can back them up with sources.`
+                            },
+                            ...conversationHistory
+                        ]
+                    });
+
+                    const response = completion.content;
+                    addMessage(response, false);
+                    conversationHistory.push({
+                        role: "assistant",
+                        content: response
+                    });
+                } catch (error) {
+                    console.error('Error:', error);
+                    addMessage("Sorry, I'm having technical difficulties! Try again!", false);
+                }
+            };
+
+            sendMessage.addEventListener('click', handleMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleMessage();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="chatWrapper">
+        <div class="chat-bubble" id="chatBubble"></div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <h2>MrBeast AI Chat</h2>
+                <button class="close-btn" id="closeChat">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    Hey guys! MrBeast here! Ask me anything or challenge me to do something crazy! 🎉
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

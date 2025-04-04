@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Matrix Money Rain Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            perspective: 1000px;
+        }
+        .money-stream {
+            position: absolute;
+            top: 0;
+            font-family: monospace;
+            text-shadow: 0 0 8px currentColor;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            will-change: transform;
+        }
+        .money {
+            position: relative;
+            display: block;
+            transform-style: preserve-3d;
+            animation: matrixGlow 2s ease-in-out infinite, rotate 3s linear infinite;
+            opacity: 0.9;
+            font-size: 120px;
+            font-weight: bold;
+            -webkit-text-stroke: 3px currentColor;
+            text-shadow: 
+                0px 0px 1px currentColor,
+                0px 0px 2px currentColor,
+                0px 0px 3px currentColor,
+                -3px 0px 5px rgba(0,0,0,0.8),
+                3px 0px 5px rgba(0,0,0,0.8);
+            transform-origin: center;
+            will-change: transform, opacity;
+        }
+        .money::before {
+            content: '$';
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateZ(-10px);
+            -webkit-text-stroke: 15px currentColor;
+            opacity: 0.3;
+        }
+        .money.faded {
+            opacity: 0.3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes matrixGlow {
+            0%, 100% { text-shadow: 0 0 8px currentColor, 0 0 12px currentColor; }
+            50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+        }
+        @keyframes rotate {
+            0% { transform: rotateY(0deg) translateZ(20px); }
+            50% { transform: rotateY(180deg) translateZ(-20px); }
+            100% { transform: rotateY(360deg) translateZ(20px); }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const mrBeastColors = [
+            '#ff1493', // hot pink
+            '#00ffff', // cyan
+            '#00ff00'  // green
+        ];
+
+        class MoneyStream {
+            constructor(x) {
+                this.element = document.createElement('div');
+                this.element.className = 'money-stream';
+                this.element.style.left = x + 'px';
+                this.length = Math.floor(Math.random() * 2) + 2;
+                this.speed = Math.random() * 30 + 20;
+                this.y = -100;
+                
+                // Randomly select a color for this stream
+                const streamColor = mrBeastColors[Math.floor(Math.random() * mrBeastColors.length)];
+                this.element.style.color = streamColor;
+                
+                const fragment = document.createDocumentFragment();
+                for(let i = 0; i < this.length; i++) {
+                    const money = document.createElement('div');
+                    money.className = 'money' + (i < this.length - 1 ? ' faded' : '');
+                    money.textContent = '$';
+                    const size = Math.random() * 80 + 120; // Bigger size range
+                    money.style.fontSize = `${size}px`;
+                    fragment.appendChild(money);
+                }
+                
+                this.element.appendChild(fragment);
+                document.body.appendChild(this.element);
+                this.animate();
+            }
+            
+            animate() {
+                const update = () => {
+                    this.y += this.speed * 0.016;
+                    this.element.style.transform = `translate3d(0, ${this.y}px, 0)`;
+                    
+                    if (this.y > window.innerHeight) {
+                        this.element.remove();
+                        return;
+                    }
+                    
+                    requestAnimationFrame(update);
+                };
+                update();
+            }
+        }
+
+        function createStream() {
+            if (document.querySelectorAll('.money-stream').length < 12) { // Increased from 4 to 12
+                const x = Math.random() * (window.innerWidth - 200); // More spacing
+                new MoneyStream(x);
+            }
+        }
+
+        // Create multiple streams at once
+        function createMultipleStreams() {
+            const streamsToCreate = Math.floor(Math.random() * 2) + 2; // 2-3 streams at once
+            for(let i = 0; i < streamsToCreate; i++) {
+                createStream();
+            }
+        }
+
+        setInterval(createMultipleStreams, 1000);
+        createMultipleStreams();
+    </script>
+</body>
+</html>
